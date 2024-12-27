@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container text-center my-5 py-4">
+        <div class="headBook pb-5 d-flex justify-content-center">
+            <h1 class="head">Bookmarker</h1>
+        </div>
+
+        <div class="inputField pb-5">
+            <h2 class="head2 py-4"><i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="mb-3 text-start">
+                <label for="nameInput" class="form-label"><i class="fa-regular fa-image"></i> Site Name</label>
+                <input type="text" oninput="validateName()" class="form-control" id="nameInput" placeholder="Bookmark Name">
+                <div id="validationName">
+                    
+                </div>
+            </div>
+            <div class="mb-3 text-start">
+                <label for="siteInput" class="form-label"><i class="fa-solid fa-gears"></i> Site URL</label>
+                <input type="url" class="form-control" id="siteInput" placeholder="Website URL">
+            </div>
+            <button type="button"  onclick="addBookmark()" class="btn btn-outline-danger px-5 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">submit</button>
+            <button class="btn btn-outline-success px-5 py-2 " onclick="clearInputField()">Reset</button>
+        </div>
+
+        <div class="row bg-white my-4">
+            <div class="col-12">
+                <div class="element row ">
+                    <div class="column col-3">Index</div>
+                    <div class="column col-3">Website Name</div>
+                    <div class="column col-3">Visit</div>
+                    <div class="column col-3">Delete</div>
+    
+                </div>
+            </div>
+
+            <div class="col-12" id="containCard">
+
+ 
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+  <!-- Modal -->
+   <div id="modalURL">
+
+   </div>
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
